@@ -1,6 +1,6 @@
 import Link from "next/link"
 const fetchBlogs = async () => {
-  const res = await fetch(`${process.env.URL}/api/blog`, {
+  const res = await fetch(`http://localhost:3000/api/blog`, {
     next: {
       revalidate: 1
     }
