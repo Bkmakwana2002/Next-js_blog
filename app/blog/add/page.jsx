@@ -10,7 +10,7 @@ function AddBlog() {
  const router = useRouter()
 
  const postBlog = async({ title,description })=>{
-     const res = fetch(`https://next-js-blog-zeta-seven.vercel.app/api/blog`,{ method:"POST",body:JSON.stringify({ title,description }),"Content-Type":"application/json" })
+     const res = fetch(`http://localhost:3000/api/blog`,{ method:"POST",body:JSON.stringify({ title,description }),"Content-Type":"application/json" })
      return (await res).json()
  }
  const handleSubmit = async(e)=>{

@@ -16,12 +16,12 @@ function EditPage({ params }) {
     const router = useRouter()
 
     const editBlog = async (data) => {
-        const res = fetch(`https://next-js-blog-zeta-seven.vercel.app/api/blog/${data.id}`, { method: "PUT", body: JSON.stringify({ title: data.title, description: data.description }), "Content-Type": "application/json" })
+        const res = fetch(`http://localhost:3000/api/blog/${data.id}`, { method: "PUT", body: JSON.stringify({ title: data.title, description: data.description }), "Content-Type": "application/json" })
         return (await res).json()
     }
 
     const deleteBlog = async (id) => {
-        const res = fetch(`https://next-js-blog-zeta-seven.vercel.app/api/blog/${id}`, { method: "DELETE", "Content-Type": "application/json" })
+        const res = fetch(`http://localhost:3000/api/blog/${id}`, { method: "DELETE", "Content-Type": "application/json" })
         return (await res).json()
     }
 
